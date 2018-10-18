@@ -6,8 +6,7 @@
 
 int main()
 {
-    typedef char type_must_be_complete[1];
-    int a = (void) sizeof(type_must_be_complete);
+    int a = 1;
 	printf("  %d\n",a);
 	return 1;
 }
