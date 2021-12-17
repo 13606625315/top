@@ -23,7 +23,7 @@ int main()
 	char writebuf[MAXSIZE], readbuf[MAXSIZE+1];
 	while(fgets(writebuf, MAXSIZE, stdin) > 0)
 	{
-		printf("1111\n");
+		printf("1111 = %u\n",(unsigned int) - 1);
 		write(connetfd, writebuf, strlen(writebuf));
 		printf("1111\n");
 		int n = read(connetfd,readbuf, MAXSIZE);

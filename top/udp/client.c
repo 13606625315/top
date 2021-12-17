@@ -7,7 +7,7 @@
 
 #include <net/if.h>
 #include <linux/sockios.h>
-const int port = 6000;
+const int port = 53;
 const int buflen = 128;
 
 #define INTERFAXENAME "wlan0"
@@ -17,7 +17,7 @@ int main()
 	struct sockaddr_in client;
 	client.sin_family = AF_INET;
 	client.sin_port = htons(port);
-	client.sin_addr.s_addr = inet_addr("127.0.0.1");
+	client.sin_addr.s_addr = inet_addr("8.8.8.8");
 	
 	int sockfd;
 	

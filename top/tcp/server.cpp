@@ -4,7 +4,7 @@
 #include<sys/socket.h>
 #include<netinet/ip.h>
 #include<unistd.h>
-const int PORT = 6666;
+const int PORT = 7777;
 const int LISTENQ = 30;
 #define check(a) if(a<0) { printf("error = %d\n",__LINE__); exit(1);}
 const int MAXSIZE = 128;
@@ -31,6 +31,7 @@ int main()
 	{
 		socklen_t clientlen = sizeof(clientaddr);
 		int connetfd = accept(sockfd, (struct sockaddr*)&clientaddr, &clientlen);
+		printf("accept\n");	
 		check(connetfd);
 		if(fork() == 0)
 		{
